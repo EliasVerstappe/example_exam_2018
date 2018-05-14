@@ -2,5 +2,5 @@
 
 class MathHelper {
     public:
-        void swap(int left, int right);
+        void swap(int * left, int * right);
 };
