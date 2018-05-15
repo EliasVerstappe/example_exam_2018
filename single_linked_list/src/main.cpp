@@ -31,10 +31,10 @@ int main(void) {
 
     char end = list.remove_at_back();
     cout << "Removed " << end << " from the back: " << list.to_string() << endl;
-    
-    cout << endl << endl << "Second list" << endl;
 
     // SECOND LIST
+    
+    cout << endl << endl << "Second list" << endl;
 
     LinkedList secondList;
     //secondList.remove_at_back();        // Should throw exception
