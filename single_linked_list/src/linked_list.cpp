@@ -6,9 +6,7 @@ LinkedList::LinkedList(void) {
 }
 
 LinkedList::~LinkedList(void) {
-    while (head) {
-        remove_at_back();
-    }
+    clear();
 }
 
 void LinkedList::add_in_front(char value) {
@@ -61,7 +59,21 @@ char LinkedList::remove_at_back(void) {
 }
 
 std::string LinkedList::to_string(void) {
-    return "";
+    if (!head) {
+        return "List is empty";
+    }
+
+    std::string output;
+
+    Node * next = head;
+    while(next) {
+        output += next->get_data();
+        next = next->get_next();
+    }
+
+    output += " [" + std::to_string(size()) + " elements]";
+
+    return output;
 }
 
 Node * LinkedList::get_last_node(void) {
@@ -94,4 +106,10 @@ int LinkedList::size(void) {
     }
 
     return i;
+}
+
+void LinkedList::clear(void) {
+    while (head) {
+        remove_at_back();
+    }
 }

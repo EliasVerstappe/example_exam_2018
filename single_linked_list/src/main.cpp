@@ -53,5 +53,23 @@ int main(void) {
 
     cout << "Removed " << first << " from the front: " << secondList.to_string() << endl;
 
+    // THIRD LIST
+
+    cout << endl << endl << "Third list" << endl;
+
+    LinkedList thirdList;
+
+    thirdList.add_at_back('1');
+    thirdList.add_at_back('2');
+    thirdList.add_at_back('3');
+    thirdList.add_at_back('4');
+    thirdList.add_at_back('5');
+
+    cout << "Adding some data: " << thirdList.to_string() << endl;
+
+    thirdList.clear();
+
+    cout << "Removed all nodes: " << thirdList.to_string() << endl;
+
     return 0;
 }

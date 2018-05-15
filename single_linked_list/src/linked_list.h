@@ -16,6 +16,8 @@ class LinkedList {
         char remove_from_front(void);
         char remove_at_back(void);
 
+        void clear(void);
+
         int size(void);
 
     public:
