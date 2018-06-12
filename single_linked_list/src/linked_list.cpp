@@ -1,5 +1,6 @@
 #include "linked_list.h"
 #include <stdexcept>
+#include <iostream>
 
 LinkedList::LinkedList(void) {
     head = nullptr;
@@ -61,8 +62,24 @@ char LinkedList::remove_at_back(void) {
 }
 
 std::string LinkedList::to_string(void) {
-    return "";
-}
+    std::string listInfo;
+
+    if (size() <= 0){
+        listInfo = "List is empty";
+    }
+           
+    Node * next = head;
+
+    while(next) {
+        listInfo += next->get_data();
+        next = next->get_next();
+    }
+
+    listInfo += " [" + std::to_string(size()) + " elements]";  
+
+
+    return listInfo;
+  }
 
 Node * LinkedList::get_last_node(void) {
     Node * next = head;
