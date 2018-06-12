@@ -3,6 +3,7 @@
 class Triangle {
 
     public:
+        Triangle(int base, int height);
         double calculate_area(void);
 
     private:
