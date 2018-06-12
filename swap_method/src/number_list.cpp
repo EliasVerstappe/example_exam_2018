@@ -7,10 +7,10 @@ void NumberList::add(int value) {
 }
 
 void NumberList::reverse(void) {
-    // MathHelper helper;
-    // for (unsigned int i = 0; i < numbers.size()/2; i++) {
-    //     helper.swap(&numbers.at(i), &numbers.at(numbers.size()-1-i));
-    // }
+    MathHelper helper;
+    for (unsigned int i = 0; i < numbers.size()/2; i++) {
+        helper.swap(&numbers.at(i), &numbers.at(numbers.size()-1-i));
+    }
 }
 
 std::vector<int> NumberList::get_vector(void) {
